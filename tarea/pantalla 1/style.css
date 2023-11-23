@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.25rem;
+}
+
+.contenedor--nombre--restaurante p {
+  color: #027000;
+  font-size: 1.25rem;
+}
+.contenedor--nombre--restaurante p span {
+  color: rgb(239, 239, 5);
+  font-size: 1.25rem;
+}
+
+svg {
+  height: 25px;
+}
+
+.contenedor--login__enlace--login {
+  color: #027000;
+}
+.contenedor--login svg {
+  margin-top: 5px;
+}
+
+.hero {
+  display: flex;
+}
+.hero img {
+  width: 100%;
+  position: absolute;
+}
+.hero__contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  padding: 1rem;
+  left: 0;
+  height: 30vh;
+}
+.hero__contenedor h1 {
+  color: white;
+  font-size: 2rem;
+}
+.hero__contenedor p {
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.hero__contenedor__botones {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.hero__contenedor__botones__boton {
+  color: white;
+  background-color: #027000;
+  border-radius: 25px;
+  padding: 0.25rem 0.75rem;
+  font-size: small;
+}/*# sourceMappingURL=style.css.map */
