@@ -5,15 +5,11 @@ $verde: #027000;
 $amarillo: rgb(239, 239, 5);
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-  font-family: $font-default;
+  @include resetearEstilos(true)
 }
 
 header {
-  display: flex;
+  @include claseComun;
   justify-content: space-between;
   align-items: baseline;
   padding: 0.25rem;
@@ -45,13 +41,13 @@ svg {
 
 
 .hero {
-  display: flex;
+  @include claseComun;
   img {
     width: 100%;
     position: absolute;
   }
   &__contenedor {
-    display: flex;
+    @include claseComun;
     flex-direction: column;
     justify-content: space-around;
     position: relative;
@@ -69,7 +65,7 @@ svg {
     }
     &__botones {
       display: flex;
-      justify-content: space-between;
+      justify-content:space-between;
       margin: 1rem;
       &__boton {
         color: white;
@@ -79,5 +75,50 @@ svg {
         font-size: small;
       }
     }
+  }
+}
+
+.card--container {
+
+  @include claseComun;
+  justify-content: space-around;
+  flex-direction: column;
+  &__card {
+    @include claseComun;
+    justify-content: space-between;
+    padding: 4px;
+    border: 1px solid black;
+    margin: 1px;
+  
+    img {
+      width: 50px;
+      height: 50px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  
+    p {
+      width: 75%;
+    }
+  }
+}
+
+
+@mixin claseComun () {
+  display: flex;
+}
+
+@mixin resetearEstilos ($default) {
+  @if ($default) {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-family: $font-default;
+  }@else {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
   }
 }
